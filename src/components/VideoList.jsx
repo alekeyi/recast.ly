@@ -1,4 +1,4 @@
-// import VideoListEntry from "./VideoListEntry";
+import VideoListEntry from "./VideoListEntry.js";
 
 // var VideoList = () => (
 //   <div className="video-list">
@@ -14,8 +14,8 @@ var VideoList = (props) => (
   // return(
   <div className="video-list">
     <h5>
-      {props.videos.map( video => 
-      <VideoListEntry video={video} />)}
+      {props.videos.map((video, index) => 
+        <VideoListEntry video={video} key={index} />)}
     </h5>
   </div>
   // );
