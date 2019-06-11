@@ -1,11 +1,24 @@
-var VideoList = () => (
+// import VideoListEntry from "./VideoListEntry";
+
+// var VideoList = () => (
+//   <div className="video-list">
+//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//     <div><h5><em>videoListEntry</em> view goes here</h5></div>
+//   </div>
+// );
+
+var VideoList = (props) => (
+  // return(
   <div className="video-list">
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    <h5>
+      {props.videos.map( video => 
+      <VideoListEntry video={video} />)}
+    </h5>
   </div>
+  // );
 );
 
 // PropTypes tell other developers what `props` a component expects
