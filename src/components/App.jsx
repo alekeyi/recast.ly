@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
       videos: {exampleVideoData},
       currentVideo: exampleVideoData[0]
-    }
+    };
   }
   handleVideoListEntryTitleClicker(video){
     this.setState({

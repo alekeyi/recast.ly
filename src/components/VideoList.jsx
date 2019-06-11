@@ -14,8 +14,8 @@ var VideoList = (props) => (
   // return(
   <div className="video-list">
     {/* <h5> */}
-      {props.videos.map((video, index) => 
-        <VideoListEntry video={video} key={video.id.videoId} click={props.click}/>)}
+    {props.videos.map((video, index) => 
+      <VideoListEntry video={video} key={video.id.videoId} click={props.click}/>)}
     {/* </h5> */}
   </div>
   // );
