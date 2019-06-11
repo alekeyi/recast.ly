@@ -2,6 +2,7 @@ import Search from './Search.js';
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import exampleVideoData from '../data/exampleVideoData.js';
+import searchYouTube from '../lib/searchYouTube.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class App extends React.Component {
     this.handleVideoListEntryTitleClicker = this.handleVideoListEntryTitleClicker.bind(this);
     this.state = {
       videos: {exampleVideoData},
-      currentVideo: exampleVideoData[0]
+      currentVideo: exampleVideoData[0],
+      search: {searchYouTube}
     };
   }
   handleVideoListEntryTitleClicker(video){
@@ -18,6 +20,11 @@ class App extends React.Component {
     });
     console.log("Click");
   }
+  handleSearchClick(searchClick) {
+    this.setState({
+      search: search.value
+    });
+  }
 
   render(props){
     return (
@@ -25,7 +32,7 @@ class App extends React.Component {
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <div><h5><em>Search</em><Search /></h5></div>
+            <div><h5><em>Search</em><Search searchClick={this.handleSearchClick}/></h5></div>
           </div>
         </nav>
         <div className="row">
