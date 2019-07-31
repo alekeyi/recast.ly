@@ -7,7 +7,7 @@ var searchYouTube = ({max = 5, query = ''}, callback) => {
   //                    &type=video
   //                    &videoCaption=closedCaption
   //                    &key={YOUTUBE_API_KEY}
-  var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=surfing&key=AIzaSyDhzvaPPdl626euEQLm_WyFTtmLNGa9xbk';
+  var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=surfing&key=YOUTUBE_API_KEY';
 
   $.get (url, {
     part: 'snippet',
@@ -24,7 +24,7 @@ var searchYouTube = ({max = 5, query = ''}, callback) => {
 
 export default searchYouTube;
 
-// GET 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=surfing&key=AIzaSyDhzvaPPdl626euEQLm_WyFTtmLNGa9xbk' HTTP/1.1
+// GET 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=surfing&key=YOUTUBE_API_KEY' HTTP/1.1
 
 // Authorization: Bearer [YOUR_ACCESS_TOKEN]
 // Accept: application/json
